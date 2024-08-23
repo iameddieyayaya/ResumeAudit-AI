@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import ResumeUploader from "./ResumeUploader";
 import ResumeWorth from "./ResumeWorth";
 import { useCompletion } from "ai/react"
+import { AiOutlineGithub } from 'react-icons/ai'; // Import GitHub icon from react-icons
+
 
 const ResumeAnalyzerApp = () => {
   const [showResumeWorth, setShowResumeWorth] = useState(false);
@@ -31,18 +33,16 @@ const ResumeAnalyzerApp = () => {
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-4xl w-full">
         {!showResumeWorth ? (
           <div className="text-center space-y-6">
-            <h1 className="text-4xl font-extrabold text-gray-800">Resume Analyzer</h1>
-            <p className="text-lg text-gray-600">Upload Your Resume</p>
-  
+            <h1 className="text-4xl font-extrabold text-gray-800">Analyze Resume</h1>
             <div className="mt-6">
               <ResumeUploader
                 setResumeText={setResumeText}
                 setIsLoading={setIsLoadingResume}
               />
             </div>
-  
+
             {(isLoadingResume || isLoading) && (
-              <p className="text-blue-500 text-lg font-medium mt-4 animate-pulse">
+              <p className="text-blue-500 text-xl font-medium mt-4 animate-pulse">
                 Loading...
               </p>
             )}
@@ -50,15 +50,28 @@ const ResumeAnalyzerApp = () => {
         ) : (
           <ResumeWorth resumeWorth={completion} />
         )}
-  
+
         {error && (
           <p className="text-red-500 text-center mt-4">
             {error.message}
           </p>
         )}
+
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://github.com/iameddieyayaya/ResumeAudit-AI"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-gray-800 hover:text-gray-600"
+          >
+            <AiOutlineGithub className="text-3xl mr-2" />
+            <span className="text-lg">View on GitHub</span>
+          </a>
+        </div>
       </div>
     </div>
   );
+
 }
 
 export default ResumeAnalyzerApp
