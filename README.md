@@ -1,4 +1,4 @@
-# My Next.js App
+# My Resume Audit AI
 
 Welcome to my Next.js application! This project leverages OpenAI's API to analyze and provide feedback on resumes.
 
