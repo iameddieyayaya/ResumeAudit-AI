@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Next.js App
+
+Welcome to my Next.js application! This project leverages OpenAI's API to analyze and provide feedback on resumes.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Before you can run this application, you'll need to set up an OpenAI API key. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Create an OpenAI Account**: If you don't have one already, sign up at [OpenAI](https://www.openai.com/).
+2. **Obtain Your API Key**: After signing in, you can find your API key in the OpenAI dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the Repository**
 
-## Learn More
+   ```bash
+   git clone
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Navigate to the Project Directory**
+   
+    ```bash
+    cd your-repository
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Install Dependencies**
+    
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Set Up Environment Variables**
 
-## Deploy on Vercel
+    Create a .env.local file in the root of the project and add your OpenAI API key:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```plaintext
+    OPENAI_API_KEY=your_openai_api_key
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. **Running the Application**
+    
+    ```bash
+    npm run dev
+    ```
+
+## Using the Application
+
+- **Upload Resume**: Navigate to the upload section and upload your resume.
+- **Receive Feedback**: The application will analyze your resume and provide feedback on its estimated worth along with tips for improvement.
+
+
